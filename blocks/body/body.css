@@ -1,0 +1,6 @@
+.body {
+  background-color: #000000;
+  font-family: 'Inter', 'Arial', 'sans-serif';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
