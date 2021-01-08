@@ -1,7 +1,8 @@
 .header {
   max-width: 880px;
-  min-height: 74px;
-  margin: 45px auto 0 auto;
+  min-height: clamp(56px, 10vw, 74px);
+  margin: clamp(28px, 5vw, 45px) auto 0 auto;
   padding: 0;
   border-bottom: 1px solid rgba(84, 84, 84, 0.7);
 }
+

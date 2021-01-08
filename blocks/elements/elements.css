@@ -1,7 +1,7 @@
 .elements {
-  margin: 74px 200px 0 200px;
+  margin: 74px 15vw 0 15vw;
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(282px, 1fr) );
   grid-gap: 17px;
 }
