@@ -1,4 +1,9 @@
 .footer__copyright {
-  color: #545454;
-  margin: 68px auto 0 200px;
+  margin: 0 0 0 0;
+}
+
+@media screen and (max-width: 1007px) {
+  .footer__copyright {
+    margin: 0 0 0 0;
+  }
 }
