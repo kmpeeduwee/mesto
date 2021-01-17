@@ -6,8 +6,12 @@
   right: 0;
   background: #000000;
   opacity: 0.5;
-  display: flex;
+  display: none;
   justify-content: center;
   padding: 195px 125px 195px 125px;
   align-items: start;
+}
+
+.overlay_active {
+  display: flex;
 }
