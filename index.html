@@ -19,9 +19,11 @@
         <div class="profile__info">
           <img src="blocks/profile/__avatar/unnamed.jpg" class="profile__avatar" alt="avatar">
           <div class="profile__description">
-            <h1 class="profile__name">Жак-Ив Кусто<img src="blocks/profile/__editButton/editButton.svg" class="profile__editButton" alt="editButton"></h1>
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+
             <p class="profile__profession">Исследователь океана</p>
           </div>
+          <img src="blocks/profile/__editButton/editButton.svg" class="profile__editButton" alt="editButton">
         </div>
         <img src="blocks/profile/__addButton/addButton.svg" class="profile__addButton" alt="addPlace">
       </section>
@@ -83,15 +85,22 @@
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
 
-    <section class="overlay">
-      <div class="popup">
-        <img src="./blocks/popup/__close/closeIcon.svg" class="popup__close">
-        <h2 class="popup__title">Редактировать профиль</h2>
-        <span class="popup__close"></span>
-      </div>
-    </section>
+
 
   </div>
-<script src="./blocks/overlay/overlay.js"></script>
+
+  <section class="popup">
+    <div class="popup__container">
+      <form class="popupForm" name="profile">
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <input type="text" name="name" placeholder="Имя" class="popup__input">
+        <input type="text" name="profession" placeholder="Профессия" class="popup__input">
+        <button class="popup__saveButton">Сохранить</button>
+      </form>
+      <img class="popup__closeButton" src="blocks/popup/__closeButton/closeIcon.svg" alt="popupClose">
+    </div>
+  </section>
+<script src="./blocks/popup/popup.js"></script>
+<script src="./blocks/card/card.js"></script>
 </body>
 </html>
