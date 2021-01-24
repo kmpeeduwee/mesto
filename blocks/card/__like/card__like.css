@@ -1,5 +1,7 @@
 .card__like {
- margin: 25px 22px 0 auto;
+  margin: 25px 22px 0 auto;
+  width: 21px;
+  height: 19px;
 }
 
 .card__like:hover {
@@ -7,5 +9,6 @@
 }
 
 .card__like:active {
-  background-image: url("../../../images/brittney-weng-WqBa8mWdcew-unsplash.jpg");
+  opacity: 1;
+  background-image: url("../../../images/Union.svg");
 }

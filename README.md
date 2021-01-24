@@ -1,17 +1,16 @@
 # Проект 4: Место
 
-### Обзор
+### Краткое описание:
 
-* Figma
-* Картинки
+Mesto - здесь можно поделиться картинками
 
-**Figma**
+**Технологии**
 
-* [Ссылка на макет в Figma](https://www.figma.com/file/StZjf8HnoeLdiXS7dYrLAh/JavaScript.-Sprint-4)
+* Flexbox;
+* БЭМ;
+* Grid layout;
+* javascript;
+* Adaptive layout;
 
-**Картинки**
-
-Доставать картинки предстоит из Фигмы. Это расхожая практика, поэтому полезно потренироваться.
-Не забудьте [оптимизировать картинки](https://tinypng.com/), чтобы ваш сайт загружался быстрее.
-
-Удачи!
+Демонстрация работы на github:
+https://kmpeeduwee.github.io/mesto/index.html

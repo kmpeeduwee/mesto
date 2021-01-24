@@ -9,6 +9,7 @@
   box-sizing: border-box;
   margin: 54px 36px 30px 36px;
   padding: 0;
+  outline: none;
 }
 
 .popup__input:last-of-type {
