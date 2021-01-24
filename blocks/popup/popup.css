@@ -10,10 +10,6 @@
   padding: 195px 0;
 }
 
-.popup_opened {
-  display: flex;
-}
-
 @media screen and (max-width: 640px){
   .popup {
     padding: 123px 0;

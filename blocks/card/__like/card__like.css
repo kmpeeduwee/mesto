@@ -1,7 +1,7 @@
 .card__like {
   margin: 25px 22px 0 auto;
-  width: 21px;
-  height: 19px;
+  max-width: 21px;
+  max-height: 19px;
 }
 
 .card__like:hover {
