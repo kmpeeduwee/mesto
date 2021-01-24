@@ -2,7 +2,11 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
+<<<<<<< HEAD
 /../../../../../../../:\Users\karts\Documents\IdeaProjects\mesto\.idea/dataSources/
+=======
+/dataSources/
+>>>>>>> 02f5e16c129aab29e7e5d73a5781887611dee0d4
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/

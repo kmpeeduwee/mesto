@@ -12,5 +12,6 @@ Mesto - здесь можно поделиться картинками
 * javascript;
 * Adaptive layout;
 
-Демонстрация работы на github:
+**Демонстрация работы на github:**
 https://kmpeeduwee.github.io/mesto/index.html
+
