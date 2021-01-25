@@ -10,72 +10,74 @@
   <div class="page">
 
     <header class="header">
-      <img src="blocks/header/__logo/logo.svg" class="header__logo" alt="header logo">
+      <img src="images/logo.svg" class="header__logo" alt="логотип">
     </header>
 
     <main class="main">
 
       <section class="profile">
         <div class="profile__info">
-          <img src="blocks/profile/__avatar/unnamed.jpg" class="profile__avatar" alt="avatar">
+          <img src="images/unnamed.jpg" class="profile__avatar" alt="аватар">
           <div class="profile__description">
-            <h1 class="profile__name">Жак-Ив Кусто</h1>
-
+            <div class="profile__description_specialString">
+              <h1 class="profile__name">Жак-Ив Кусто</h1>
+              <button class="profile__editButton" type="button"></button>
+            </div>
             <p class="profile__profession">Исследователь океана</p>
           </div>
-          <img src="blocks/profile/__editButton/editButton.svg" class="profile__editButton" alt="editButton">
+
         </div>
-        <img src="blocks/profile/__addButton/addButton.svg" class="profile__addButton" alt="addPlace">
+        <button class="profile__addButton" type="button"></button>
       </section>
 
       <section class="elements">
-        <div class="card">
-          <img src="images/micheile-henderson-PTLBXS2zM0o-unsplash.jpg" alt="cardImage" class="card__image">
+        <article class="card">
+          <img src="images/micheile-henderson-PTLBXS2zM0o-unsplash.jpg" alt="изображение" class="card__image">
           <div class="card__container">
             <h2 class="card__title">Цветы</h2>
-            <img src="images/Group.svg" class="card__like" alt="like">
+            <button class="card__like" type="button"></button>
           </div>
-        </div>
+        </article>
 
-        <div class="card">
-          <img src="images/brian-erickson-cD7hI-4uPx0-unsplash.jpg" alt="cardImage" class="card__image">
+        <article class="card">
+          <img src="images/brian-erickson-cD7hI-4uPx0-unsplash.jpg" alt="изображение" class="card__image">
           <div class="card__container">
             <h2 class="card__title">Праздник</h2>
-            <img src="images/Group.svg" class="card__like" alt="like">
+            <button class="card__like" type="button"></button>
           </div>
-        </div>
+        </article>
 
-        <div class="card">
-          <img src="images/brittney-weng-WqBa8mWdcew-unsplash.jpg" alt="cardImage" class="card__image">
+        <article class="card">
+          <img src="images/brittney-weng-WqBa8mWdcew-unsplash.jpg" alt="изображение" class="card__image">
           <div class="card__container">
             <h2 class="card__title">Рождественская черепаха</h2>
-            <img src="images/Group.svg" class="card__like" alt="like">
+            <button class="card__like" type="button"></button>
           </div>
-        </div>
+        </article>
 
-        <div class="card">
-          <img src="images/emily-wade-I9ntLikPBx4-unsplash.jpg" alt="cardImage" class="card__image">
+        <article class="card">
+          <img src="images/emily-wade-I9ntLikPBx4-unsplash.jpg" alt="изображение" class="card__image">
           <div class="card__container">
             <h2 class="card__title">Минимализм</h2>
-            <img src="images/Group.svg" class="card__like" alt="like">
+            <button class="card__like" type="button"></button>
           </div>
-        </div>
+        </article>
 
-        <div class="card">
-          <img src="images/hearted-co-2ld7b23VTDw-unsplash.jpg" alt="cardImage" class="card__image">
+        <article class="card">
+          <img src="images/hearted-co-2ld7b23VTDw-unsplash.jpg" alt="изображение" class="card__image">
           <div class="card__container">
             <h2 class="card__title">Мёд</h2>
-            <img src="images/Group.svg" class="card__like" alt="like">
+            <button class="card__like" type="button"></button>
           </div>
-        </div>
+        </article>
 
-        <div class="card">
-          <img src="images/mathilde-langevin-cVlI8C6rJe8-unsplash.jpg" alt="cardImage" class="card__image">
+        <article class="card">
+          <img src="images/mathilde-langevin-cVlI8C6rJe8-unsplash.jpg" alt="изображение" class="card__image">
           <div class="card__container">
             <h2 class="card__title">Шестая карточка</h2>
-            <img src="images/Group.svg" class="card__like" alt="like">
+            <button class="card__like" type="button"></button>
           </div>
-        </div>
+        </article>
 
       </section>
 
@@ -89,13 +91,13 @@
 
   <section class="popup">
     <div class="popup__container">
-      <form class="popupForm" name="profile">
-        <h2 class="popup__title">Редактировать профиль</h2>
-        <input type="text" maxlength="50" name="name" placeholder="Имя" class="popup__input">
-        <input type="text" maxlength="50" name="profession" placeholder="Профессия" class="popup__input">
-        <button class="popup__saveButton">Сохранить</button>
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form class="popup__form-container" name="profile">
+        <input type="text" maxlength="50" name="name" placeholder="Имя" class="popup__form-input popup__form-input_name">
+        <input type="text" maxlength="50" name="profession" placeholder="Профессия" class="popup__form-input popup__form-input_profession">
+        <button class="popup__saveButton" type="submit">Сохранить</button>
       </form>
-      <img class="popup__closeButton" src="blocks/popup/__closeButton/closeIcon.svg" alt="popupClose">
+      <button class="popup__closeButton" type="submit"></button>
     </div>
   </section>
 <script src="scripts/popup.js"></script>

@@ -7,7 +7,9 @@
   background: rgba(0, 0, 0, 0.5);
   display: none;
   justify-content: center;
-  padding: 195px 0;
+  padding: 195px 0 0 0;
+  object-fit: cover;
+  align-items: flex-start;
 }
 
 @media screen and (max-width: 640px){

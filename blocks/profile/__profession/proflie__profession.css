@@ -7,9 +7,13 @@
   font-size: 18px;
   line-height: 22px;
   color: #FFFFFF;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 400px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 528px) {
   .profile__profession {
     font-size: 14px;
     line-height: 17px;

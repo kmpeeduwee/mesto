@@ -1,46 +1,33 @@
-//обработка открытия/закрытия попапа
+let body = document.querySelector('.body');
 
-let openButton = document.querySelector('.profile__editButton');
-let popup = document.querySelector('.popup');
-let closeButton = popup.querySelector('.popup__closeButton');
+let popup = body.querySelector('.popup');
 
-let tooglePopup = () => {
-  popup.classList.toggle('popup_opened');
-};
+let openFormButton = body.querySelector('.profile__editButton');
+let nameInput = body.querySelector('.profile__name');
+let jobInput = body.querySelector('.profile__profession');
+let formEditProfile = body.querySelector('.popup__container');
 
-openButton.addEventListener('click', tooglePopup);
-closeButton.addEventListener('click', tooglePopup);
+let closeFormButton = formEditProfile.querySelector('.popup__closeButton');
+let firstNameInput = formEditProfile.querySelector('.popup__form-input_name');
+let secondNameInput = formEditProfile.querySelector('.popup__form-input_profession');
 
-popup.addEventListener('click', () => {
-  if (event.target === event.currentTarget) {
-    tooglePopup();
-  };
-});
+function openPopup () {
+  firstNameInput.value = nameInput.textContent;
+  secondNameInput.value = jobInput.textContent;
+  popup.classList.add('popup_opened');
+}
 
-//обработка формы
+function closePopup () {
+  popup.classList.remove('popup_opened');
+}
 
-let form = document.querySelector('.popupForm');
+function formSubmitHandler(evt) {
+  evt.preventDefault();
+  nameInput.textContent = firstNameInput.value;
+  jobInput.textContent = secondNameInput.value;
+  closePopup ();
+}
 
-let nameInput = document.querySelector('.profile__name').textContent;
-let jobInput = document.querySelector('.profile__profession').textContent;
-
-
-const nameProfile = document.forms.profile.elements.name;
-const professionProfile = document.forms.profile.elements.profession;
-
-nameProfile.value = nameInput;
-professionProfile.value = jobInput;
-
-//сохранение введенных в форму значений
-
-const popupSaveButton = document.querySelector('.popup__saveButton');
-popupSaveButton.addEventListener('click', function (event) {
-  const userName = document.querySelector('.profile__name');
-  const userProfession = document.querySelector('.profile__profession');
-  userName.textContent = nameProfile.value;
-  userProfession.textContent = professionProfile.value;
-  event.preventDefault();
-  tooglePopup();
-});
-
-
+openFormButton.addEventListener('click', openPopup);
+formEditProfile.addEventListener('submit', formSubmitHandler);
+closeFormButton.addEventListener('click', closePopup);
