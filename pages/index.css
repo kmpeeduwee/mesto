@@ -39,4 +39,4 @@
 @import url('../blocks/popup/__saveButton/popup__saveButton.css');
 @import url('../blocks/popup/__closeButton/popup__closeButton.css');
 @import url('../blocks/popup/_opened/popup_opened.css');
-@import url('../blocks/profile/__description/_specialString/profile__description_specialString.css');
+@import url('../blocks/profile/__specialString/profile__specialString.css');
