@@ -8,8 +8,8 @@ let jobInput = body.querySelector('.profile__profession');
 let formEditProfile = body.querySelector('.popup__container');
 
 let closeFormButton = formEditProfile.querySelector('.popup__closeButton');
-let firstNameInput = formEditProfile.querySelector('.popup__form-input_name');
-let secondNameInput = formEditProfile.querySelector('.popup__form-input_profession');
+let firstNameInput = formEditProfile.querySelector('.popup__input_type_name');
+let secondNameInput = formEditProfile.querySelector('.popup__input_type_profession');
 
 function openPopup () {
   firstNameInput.value = nameInput.textContent;

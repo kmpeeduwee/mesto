@@ -1,4 +1,4 @@
-.popup__form-input {
+.popup__input {
   max-width: 358px;
   width: 100%;
   border: 0;
@@ -11,17 +11,17 @@
   outline: none;
 }
 
-.popup__form-input:last-of-type {
+.popup__input:last-of-type {
   margin: 0 36px 48px 36px;
 }
 
 @media screen and (max-width: 620px) {
-  .popup__form-input {
+  .popup__input {
     max-width: 238px;
     margin: 75px 22px 30px 22px;
   }
 
-  .popup__form-input:last-of-type {
+  .popup__input:last-of-type {
     margin: 0 22px 45px 22px;
   }
 }
