@@ -5,11 +5,14 @@
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.5);
-  display: none;
+  display: flex;
   justify-content: center;
   padding: 195px 0 0 0;
   object-fit: cover;
   align-items: flex-start;
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
 }
 
 @media screen and (max-width: 640px){

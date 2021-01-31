@@ -31,53 +31,7 @@
       </section>
 
       <section class="elements">
-        <article class="card">
-          <img src="images/micheile-henderson-PTLBXS2zM0o-unsplash.jpg" alt="изображение" class="card__image">
-          <div class="card__container">
-            <h2 class="card__title">Цветы</h2>
-            <button class="card__like" aria-label="лайкнуть" type="button"></button>
-          </div>
-        </article>
 
-        <article class="card">
-          <img src="images/brian-erickson-cD7hI-4uPx0-unsplash.jpg" alt="изображение" class="card__image">
-          <div class="card__container">
-            <h2 class="card__title">Праздник</h2>
-            <button class="card__like" aria-label="лайкнуть" type="button"></button>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="images/brittney-weng-WqBa8mWdcew-unsplash.jpg" alt="изображение" class="card__image">
-          <div class="card__container">
-            <h2 class="card__title">Рождественская черепаха</h2>
-            <button class="card__like" aria-label="лайкнуть" type="button"></button>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="images/emily-wade-I9ntLikPBx4-unsplash.jpg" alt="изображение" class="card__image">
-          <div class="card__container">
-            <h2 class="card__title">Минимализм</h2>
-            <button class="card__like" aria-label="лайкнуть" type="button"></button>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="images/hearted-co-2ld7b23VTDw-unsplash.jpg" alt="изображение" class="card__image">
-          <div class="card__container">
-            <h2 class="card__title">Мёд</h2>
-            <button class="card__like" aria-label="лайкнуть" type="button"></button>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="images/mathilde-langevin-cVlI8C6rJe8-unsplash.jpg" alt="изображение" class="card__image">
-          <div class="card__container">
-            <h2 class="card__title">Шестая карточка</h2>
-            <button class="card__like" aria-label="лайкнуть" type="button"></button>
-          </div>
-        </article>
 
       </section>
 
@@ -89,7 +43,7 @@
 
   </div>
 
-  <section class="popup">
+  <section class="popup popup_type_editProfile">
     <div class="popup__container">
       <h2 class="popup__title">Редактировать профиль</h2>
       <form class="popup__form-container" name="profile">
@@ -101,17 +55,38 @@
     </div>
   </section>
 
-  <section class="popup popup_image">
+  <section class="popup popup_type_addPlace">
     <div class="popup__container popup__container_type_image">
       <h2 class="popup__title">Новое место</h2>
       <form class="popup__form-container" name="profile">
         <input type="text" maxlength="50" name="name" placeholder="Название" class="popup__input popup__input_type_place">
-        <input type="text" maxlength="50" name="profession" placeholder="Ссылка на картинку" class="popup__input popup__input_type_image">
+        <input type="text" name="link" placeholder="Ссылка на картинку" class="popup__input popup__input_type_image">
         <button class="popup__saveButton popup__saveButton_type_card" aria-label="сохранить" type="submit">Создать</button>
       </form>
-      <button class="popup__closeButton popup__closeButton_type_card" aria-label="закрыть" type="button"></button>
+      <button class="popup__closeButton" aria-label="закрыть" type="button"></button>
     </div>
   </section>
-<script src="scripts/popup.js"></script>
+
+  <section class="popup popup_type_bigImage">
+    <figure class="popup__container popup__container_type_bigImage">
+      <button class="popup__closeButton popup__close_type_bigImage" type="button" aria-label="Закрыть"></button>
+        <img src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg" alt="temp" class="popup__image">
+        <figcaption class="popup__caption"></figcaption>
+    </figure>
+  </section>
+
+  <template class="template">
+    <article class="card">
+      <img src="images/brittney-weng-WqBa8mWdcew-unsplash.jpg" alt="2" class="card__image">
+      <div class="card__container">
+        <h2 class="card__title"></h2>
+        <button class="card__like" aria-label="лайкнуть" type="button"></button>
+      </div>
+      <button class="card__button_delete" aria-label="удалить карточку" type="button"></button>
+    </article>
+  </template>
+
+<script src="scripts/initialCards.js"></script>
+<script src="scripts/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,9 @@
+.popup__container_type_bigImage {
+  max-width: 75vw;
+  max-height: 75vh;
+  border-radius: 0;
+  position: relative;
+  background: rgba(0, 0, 0, 0);
+}
+
+
