@@ -46,3 +46,7 @@
 @import url('../blocks/popup/__container/_type_bigImage/popup__container_type_bigImage.css');
 @import url('../blocks/popup/_type_bigImage/popup_type_bigImage.css');
 @import url('../blocks/popup/__image/popup__image.css');
+@import url('../blocks/popup/__input/_type/popup__input_type_error.css');
+@import url('../blocks/popup/__input_error/popup__input-error.css');
+@import url('../blocks/popup/__saveButton/_disabled/popup__saveButton_disabled.css');
+

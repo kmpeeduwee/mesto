@@ -14,23 +14,22 @@ const formEditProfile = popupEditProfile.querySelector('.popup__form-container')
 const template = body.querySelector('.template');
 const formAddCard = popupAddCard.querySelector('.popup__form-container');
 const cardContainer = body.querySelector('.elements');
-const popupImage = popupBigImage.querySelector('.popup__image'); //
-const popupImageCaption = popupBigImage.querySelector('.popup__caption'); //
-const saveCardButton = popupAddCard.querySelector('.popup__saveButton_type_card');
+const popupImage = popupBigImage.querySelector('.popup__image');
+const popupImageCaption = popupBigImage.querySelector('.popup__caption');
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
-  popup.addEventListener('click', closingViaClick);
-  body.addEventListener('keydown', closingViaKeydown);
+  popup.addEventListener('click', handleOverlayClick);
+  body.addEventListener('keydown', handleEscUp);
 }
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
-  popup.removeEventListener('click', closingViaClick);
-  body.removeEventListener('keydown', closingViaKeydown);
+  popup.removeEventListener('click', handleOverlayClick);
+  body.removeEventListener('keydown', handleEscUp);
 }
 
-function closingViaClick(evt) {
+function handleOverlayClick(evt) {
   if (evt.target.classList.contains('popup__closeButton') || evt.target.classList.contains('popup_opened')) {
     const targetElement = evt.target;
     const targetPopup = targetElement.closest('.popup_opened');
@@ -38,8 +37,9 @@ function closingViaClick(evt) {
   }
 }
 
-function closingViaKeydown(evt) {
-  if (evt.key === 'Escape') {
+function handleEscUp(evt) {
+  const ESCAPE_KEY = 'Escape';
+  if (evt.key === ESCAPE_KEY) {
     const targetPopup = body.querySelector('.popup_opened');
     closePopup(targetPopup);
   }
@@ -87,7 +87,6 @@ function addPlace(evt) {
   evt.preventDefault();
   cardContainer.prepend(creatCard(inputCardPlace.value, inputCardLinkImage.value));
   closePopup(popupAddCard);
-  saveCardButton.classList.remove('popup__submit-button_active');
 }
 
 openButtonEditProfile.addEventListener('click', function () {
@@ -107,3 +106,6 @@ initialCards.forEach(function (item) {
 
 formEditProfile.addEventListener('submit', editProfile);
 formAddCard.addEventListener('submit', addPlace);
+
+
+enableValidation(validateOptions);

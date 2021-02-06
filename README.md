@@ -1,4 +1,4 @@
-# Проект 4: Место
+# Проект 6: Место
 
 ### Краткое описание:
 
@@ -11,6 +11,7 @@ Mesto - здесь можно поделиться картинками
 * Grid layout;
 * javascript;
 * Adaptive layout;
+* Валидация форм;
 
 **Демонстрация работы на github:**
 https://kmpeeduwee.github.io/mesto/index.html

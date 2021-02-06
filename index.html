@@ -46,10 +46,12 @@
   <section class="popup popup_type_editProfile">
     <div class="popup__container">
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="popup__form-container" name="profile">
-        <input type="text" maxlength="50" name="name" placeholder="Имя" class="popup__input popup__input_type_name">
-        <input type="text" maxlength="50" name="profession" placeholder="Профессия" class="popup__input popup__input_type_profession">
-        <button class="popup__saveButton" aria-label="сохранить" type="submit">Сохранить</button>
+      <form class="popup__form-container" name="profile" novalidate>
+        <input type="text" minlength="2" maxlength="40" required autocomplete="off" name="name" placeholder="Имя" class="popup__input popup__input_type_name" id="name-input">
+        <span class="popup__input-error name-input-error"></span>
+        <input type="text" minlength="2" maxlength="200" required name="profession" placeholder="Профессия" class="popup__input popup__input_type_profession" id="about-input">
+        <span class="popup__input-error about-input-error"></span>
+        <button class="popup__saveButton popup__saveButton_type_editProfile" aria-label="сохранить" type="submit">Сохранить</button>
       </form>
       <button class="popup__closeButton" aria-label="закрыть" type="button"></button>
     </div>
@@ -58,10 +60,12 @@
   <section class="popup popup_type_addPlace">
     <div class="popup__container popup__container_type_image">
       <h2 class="popup__title">Новое место</h2>
-      <form class="popup__form-container" name="profile">
-        <input type="text" maxlength="50" name="name" placeholder="Название" class="popup__input popup__input_type_place">
-        <input type="text" name="link" placeholder="Ссылка на картинку" class="popup__input popup__input_type_image">
-        <button class="popup__saveButton popup__saveButton_type_card" aria-label="сохранить" type="submit">Создать</button>
+      <form class="popup__form-container" name="addPlace" novalidate>
+        <input type="text" minlength="2" maxlength="50" name="name" placeholder="Название" class="popup__input popup__input_type_place" id="place-input">
+        <span class="popup__input-error place-input-error"></span>
+        <input type="url" name="link" placeholder="Ссылка на картинку" class="popup__input popup__input_type_image" id="link-input">
+        <span class="popup__input-error link-input-error"></span>
+        <button class="popup__saveButton popup__saveButton_type_card popup__saveButton_disabled" aria-label="создать" type="submit" >Создать</button>
       </form>
       <button class="popup__closeButton" aria-label="закрыть" type="button"></button>
     </div>
@@ -87,6 +91,8 @@
   </template>
 
 <script src="scripts/initialCards.js"></script>
+<script src="scripts/validate.js"></script>
 <script src="scripts/index.js"></script>
+
 </body>
 </html>
