@@ -16,6 +16,7 @@ const formAddCard = popupAddCard.querySelector('.popup__form-container');
 const cardContainer = body.querySelector('.elements');
 const popupImage = popupBigImage.querySelector('.popup__image');
 const popupImageCaption = popupBigImage.querySelector('.popup__caption');
+const saveButtonAddCard = popupAddCard.querySelector('.popup__saveButton_type_card');
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
@@ -62,7 +63,7 @@ function creatCard(cardName, cardImageLink) {
   placeImage.src = cardImageLink;
   placeImage.alt = cardName;
   placeImage.addEventListener('click', openButtonImg);
-  cardLikeButton.addEventListener('click', placeLike);
+  cardLikeButton.addEventListener('click', likePlace);
   cardButtonDelete.addEventListener('click', removePlace);
   return cardPart;
 }
@@ -75,7 +76,7 @@ function openButtonImg(evt) {
   openPopup(popupBigImage);
 }
 
-function placeLike(evt) {
+function likePlace(evt) {
   evt.target.classList.toggle('card__like_type_active');
 }
 
@@ -97,6 +98,7 @@ openButtonEditProfile.addEventListener('click', function () {
 
 openButtonAddCard.addEventListener('click', function () {
   formAddCard.reset();
+  saveButtonAddCard.setAttribute('disabled', 'true');
   openPopup(popupAddCard);
 });
 
@@ -106,6 +108,3 @@ initialCards.forEach(function (item) {
 
 formEditProfile.addEventListener('submit', editProfile);
 formAddCard.addEventListener('submit', addPlace);
-
-
-enableValidation(validateOptions);

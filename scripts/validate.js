@@ -1,40 +1,38 @@
-const validateOptions = {
-  formSelector: '.popup__form-container',
-  inputSelector: '.popup__input',
-  submitButtonSelector: '.popup__saveButton',
-  inactiveButtonClass: 'popup__saveButton_disabled',
-  inputErrorClass: 'popup__input_type_error',
-  errorClass: 'popup__input-error'
-}
-
-const enableValidation = (options) => {
-  const {
-    formSelector,
-    inputSelector,
-    submitButtonSelector,
-    inactiveButtonClass,
-    inputErrorClass,
-    errorClass
-  } = options
-
-  const forms = Array.from(document.querySelectorAll(formSelector))
-
+function setEventListeners(config) {
+  const forms = Array.from(document.querySelectorAll(`.${config.formSelector}`))
   forms.forEach(form => {
-    const button = form.querySelector(submitButtonSelector)
-    const inputs = Array.from(form.querySelectorAll(inputSelector))
-    toggleButtonState(inputs, button, inactiveButtonClass)
-    form.addEventListener('submit', (event) => {
-      event.preventDefault()
-      toggleButtonState(inputs, button, inactiveButtonClass)
-    })
+    const inputs = Array.from(form.querySelectorAll(`.${config.inputSelector}`))
+    const button = form.querySelector(`.${config.submitButtonSelector}`)
+
+
     inputs.forEach(input => {
       input.addEventListener('input', () => {
-        checkValidation(form, input, errorClass, inputErrorClass)
-        toggleButtonState(inputs, button, inactiveButtonClass)
+        checkValidation(form, input, `.${config.errorClass}`, `.${config.inputErrorClass}`)
+        toggleButtonState(inputs, button, `.${config.inactiveButtonClass}`)
       })
     })
   })
 }
+
+const enableValidation = (config) => {
+  const forms = Array.from(document.querySelectorAll(`.${config.formSelector}`))
+  forms.forEach(form => {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault()
+    })
+    setEventListeners(config);
+  })
+}
+
+enableValidation({
+  formSelector: 'popup__form-container',
+  inputSelector: 'popup__input',
+  submitButtonSelector: 'popup__saveButton',
+  inactiveButtonClass: 'popup__saveButton_disabled',
+  inputErrorClass: 'popup__input_type_error',
+  errorClass: 'popup__input-error'
+})
+
 const noValidInput = (inputs) => inputs.some(input => !input.validity.valid)
 
 const toggleButtonState = (inputs, button, disableClass) => {
@@ -46,6 +44,7 @@ const toggleButtonState = (inputs, button, disableClass) => {
     button.disabled = false
   }
 }
+
 const checkValidation = (form, input, errorClass, inputErrorClass) => {
   if (!input.validity.valid) {
     showInputError(form, input, input.validationMessage, errorClass, inputErrorClass)
