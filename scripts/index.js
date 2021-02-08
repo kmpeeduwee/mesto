@@ -98,6 +98,7 @@ openButtonEditProfile.addEventListener('click', function () {
 
 openButtonAddCard.addEventListener('click', function () {
   formAddCard.reset();
+  saveButtonAddCard.classList.add('popup__saveButton_disabled');
   saveButtonAddCard.setAttribute('disabled', 'true');
   openPopup(popupAddCard);
 });

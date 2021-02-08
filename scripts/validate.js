@@ -8,7 +8,7 @@ function setEventListeners(config) {
     inputs.forEach(input => {
       input.addEventListener('input', () => {
         checkValidation(form, input, `.${config.errorClass}`, `.${config.inputErrorClass}`)
-        toggleButtonState(inputs, button, `.${config.inactiveButtonClass}`)
+        toggleButtonState(inputs, button, `${config.inactiveButtonClass}`)
       })
     })
   })
