@@ -1,4 +1,4 @@
-# Проект 6: Место
+# Проект 7: Место
 
 ### Краткое описание:
 
@@ -12,6 +12,7 @@ Mesto - здесь можно поделиться картинками
 * javascript;
 * Adaptive layout;
 * Валидация форм;
+* ООП;
 
 **Демонстрация работы на github:**
 https://kmpeeduwee.github.io/mesto/index.html
