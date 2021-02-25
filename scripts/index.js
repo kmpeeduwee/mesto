@@ -95,7 +95,6 @@ openButtonEditProfile.addEventListener('click', function () {
 openButtonAddCard.addEventListener('click', function () {
   formAddCard.reset();
   saveButtonAddCard.classList.add('popup__saveButton_disabled');
-  saveButtonAddCard.setAttribute('disabled', 'true');
   openPopup(popupAddCard);
 });
 
@@ -121,7 +120,7 @@ formAddCard.addEventListener('submit', addPlace);
 
 import FormValidator from "./FormValidator.js";
 
-let validationObject = {
+const validationObject = {
   formSelector: 'popup__form-container',
   inputSelector: 'popup__input',
   submitButtonSelector: 'popup__saveButton',
@@ -130,6 +129,8 @@ let validationObject = {
   errorClass: 'popup__input-error'
 };
 
-let validator = new FormValidator(validationObject);
+const editProfileValidator = new FormValidator(validationObject, formEditProfile);
+const addCardValidator = new FormValidator(validationObject, formAddCard);
 
-validator.enableValidation();
+editProfileValidator.enableValidation();
+addCardValidator.enableValidation();

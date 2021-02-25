@@ -46,7 +46,7 @@
   <section class="popup popup_type_editProfile">
     <div class="popup__container">
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="popup__form-container" name="profile" novalidate>
+      <form class="popup__form-container popup__form-container_type_editProfile" name="profile" novalidate>
         <input type="text" minlength="2" maxlength="40" required autocomplete="off" name="name" placeholder="Имя" class="popup__input popup__input_type_name" id="name-input">
         <span class="popup__input-error name-input-error"></span>
         <input type="text" minlength="2" maxlength="200" required name="profession" placeholder="Профессия" class="popup__input popup__input_type_profession" id="about-input">
@@ -60,7 +60,7 @@
   <section class="popup popup_type_addPlace">
     <div class="popup__container popup__container_type_image">
       <h2 class="popup__title">Новое место</h2>
-      <form class="popup__form-container" name="addPlace" novalidate>
+      <form class="popup__form-container popup__form-container_type_addPlace" name="addPlace" novalidate>
         <input type="text" minlength="2" maxlength="50" required name="placeName" placeholder="Название" class="popup__input popup__input_type_place" id="place-input">
         <span class="popup__input-error place-input-error"></span>
         <input type="url" name="link" required placeholder="Ссылка на картинку" class="popup__input popup__input_type_image" id="link-input">
