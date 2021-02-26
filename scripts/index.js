@@ -42,7 +42,6 @@ const formAddCard = popupAddCard.querySelector('.popup__form-container');
 const cardContainer = body.querySelector('.elements');
 const popupImage = popupBigImage.querySelector('.popup__image');
 const popupImageCaption = popupBigImage.querySelector('.popup__caption');
-const saveButtonAddCard = popupAddCard.querySelector('.popup__saveButton_type_card');
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
@@ -94,7 +93,7 @@ openButtonEditProfile.addEventListener('click', function () {
 
 openButtonAddCard.addEventListener('click', function () {
   formAddCard.reset();
-  saveButtonAddCard.classList.add('popup__saveButton_disabled');
+  addCardValidator.disableSubmitButton();
   openPopup(popupAddCard);
 });
 
