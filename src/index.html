@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto</title>
+</head>
+<body class="body">
+  <div class="page">
+
+    <header class="header">
+      <img src="<%=require('./images/logo.svg')%>" class="header__logo" alt="логотип">
+    </header>
+
+    <main class="main">
+
+      <section class="profile">
+        <div class="profile__info">
+          <img src="<%=require('./images/unnamed.jpg')%>" class="profile__avatar" alt="аватар">
+          <div class="profile__description">
+            <div class="profile__specialString">
+              <h1 class="profile__name">Жак-Ив Кусто</h1>
+              <button class="profile__editButton" aria-label="редактировать" type="button"></button>
+            </div>
+            <p class="profile__profession">Исследователь океана</p>
+          </div>
+
+        </div>
+        <button class="profile__addButton" aria-label="добавить" type="button"></button>
+      </section>
+
+      <section class="elements">
+
+
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copyright">&copy; 2021 Mesto Russia</p>
+    </footer>
+
+  </div>
+
+  <section class="popup popup_type_editProfile">
+    <div class="popup__container">
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form class="popup__form-container popup__form-container_type_editProfile" name="profile" novalidate>
+        <input type="text" minlength="2" maxlength="40" required autocomplete="off" name="name" placeholder="Имя" class="popup__input popup__input_type_name" id="name-input">
+        <span class="popup__input-error name-input-error"></span>
+        <input type="text" minlength="2" maxlength="200" required name="profession" placeholder="Профессия" class="popup__input popup__input_type_profession" id="about-input">
+        <span class="popup__input-error about-input-error"></span>
+        <button class="popup__saveButton popup__saveButton_type_editProfile" aria-label="сохранить" type="submit">Сохранить</button>
+      </form>
+      <button class="popup__closeButton" aria-label="закрыть" type="button"></button>
+    </div>
+  </section>
+
+  <section class="popup popup_type_addPlace">
+    <div class="popup__container popup__container_type_image">
+      <h2 class="popup__title">Новое место</h2>
+      <form class="popup__form-container popup__form-container_type_addPlace" name="addPlace" novalidate>
+        <input type="text" minlength="2" maxlength="50" required name="placeName" placeholder="Название" class="popup__input popup__input_type_place" id="place-input">
+        <span class="popup__input-error place-input-error"></span>
+        <input type="url" name="link" required placeholder="Ссылка на картинку" class="popup__input popup__input_type_image" id="link-input">
+        <span class="popup__input-error link-input-error"></span>
+        <button class="popup__saveButton popup__saveButton_type_card" aria-label="создать" type="submit">Создать</button>
+      </form>
+      <button class="popup__closeButton" aria-label="закрыть" type="button"></button>
+    </div>
+  </section>
+
+  <section class="popup popup_type_bigImage">
+    <figure class="popup__container popup__container_type_bigImage">
+      <button class="popup__closeButton" type="button" aria-label="Закрыть"></button>
+        <img src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg" alt="temp" class="popup__image">
+        <figcaption class="popup__caption"></figcaption>
+    </figure>
+  </section>
+
+  <template class="template">
+    <article class="card">
+      <img src=" " alt="2" class="card__image">
+      <div class="card__container">
+        <h2 class="card__title"></h2>
+        <button class="card__like" aria-label="лайкнуть" type="button"></button>
+      </div>
+      <button class="card__button_delete" aria-label="удалить карточку" type="button"></button>
+    </article>
+  </template>
+
+</body>
+</html>
