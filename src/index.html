@@ -4,20 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mesto</title>
-  <link rel="stylesheet" href="pages/index.css">
 </head>
 <body class="body">
   <div class="page">
 
     <header class="header">
-      <img src="images/logo.svg" class="header__logo" alt="логотип">
+      <img src="<%=require('./images/logo.svg')%>" class="header__logo" alt="логотип">
     </header>
 
     <main class="main">
 
       <section class="profile">
         <div class="profile__info">
-          <img src="images/unnamed.jpg" class="profile__avatar" alt="аватар">
+          <img src="<%=require('./images/unnamed.jpg')%>" class="profile__avatar" alt="аватар">
           <div class="profile__description">
             <div class="profile__specialString">
               <h1 class="profile__name">Жак-Ив Кусто</h1>
@@ -81,7 +80,7 @@
 
   <template class="template">
     <article class="card">
-      <img src="images/brittney-weng-WqBa8mWdcew-unsplash.jpg" alt="2" class="card__image">
+      <img src=" " alt="2" class="card__image">
       <div class="card__container">
         <h2 class="card__title"></h2>
         <button class="card__like" aria-label="лайкнуть" type="button"></button>
@@ -89,8 +88,6 @@
       <button class="card__button_delete" aria-label="удалить карточку" type="button"></button>
     </article>
   </template>
-
-<script type="module" src="scripts/index.js"></script>
 
 </body>
 </html>

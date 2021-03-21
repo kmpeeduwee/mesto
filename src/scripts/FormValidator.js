@@ -1,12 +1,4 @@
 export default class FormValidator {
-  _inputSelector
-  _submitButtonSelector
-  _inactiveButtonClass
-  _inputErrorClass
-  _errorClass
-  _formElement
-  _submitButton
-
   constructor(options, formElement) {
     this._inputSelector = options.inputSelector;
     this._submitButtonSelector = options.submitButtonSelector;
@@ -25,7 +17,7 @@ export default class FormValidator {
   enableSubmitButton() {
     this._submitButton.classList.remove(this._inactiveButtonClass);
     this._submitButton.disabled = false;
-  }
+  };
 
   _noValidInput = (inputs) => inputs.some(input => !input.validity.valid);
 
