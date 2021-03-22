@@ -92,7 +92,6 @@ const popupAddForm = new PopupWithForm(
 popupAddForm.setEventListeners();
 
 openButtonAddCard.addEventListener('click', () => {
-  // addCardValidator.toggleButtonState();
   popupAddForm.open();
 });
 
@@ -106,6 +105,5 @@ openButtonEditProfile.addEventListener('click', () => {
   const inputValues = userInfo.getUserInfo();
   inputProfileName.value = inputValues.name;
   inputProfileProfession.value = inputValues.info;
-  // editProfileValidator.toggleButtonState();
   popupEditForm.open();
 });
