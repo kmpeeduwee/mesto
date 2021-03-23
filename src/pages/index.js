@@ -51,10 +51,6 @@ const openButtonEditProfile = body.querySelector('.profile__editButton');
 const openButtonAddCard = body.querySelector('.profile__addButton');
 const inputProfileName = popupEditProfile.querySelector('.popup__input_type_name');
 const inputProfileProfession = popupEditProfile.querySelector('.popup__input_type_profession');
-const inputCardPlace = popupAddCard.querySelector('.popup__input_type_place');
-const inputCardLinkImage = popupAddCard.querySelector('.popup__input_type_image');
-const nameInput = body.querySelector('.profile__name');
-const jobInput = body.querySelector('.profile__profession');
 const formEditProfile = popupEditProfile.querySelector('.popup__form-container');
 const formAddCard = popupAddCard.querySelector('.popup__form-container');
 
@@ -79,13 +75,9 @@ cardsSection.renderItems();
 
 const popupAddForm = new PopupWithForm(
   '.popup_type_addPlace',
-  () => {
-    const item = {};
-    item.name = inputCardPlace.value;
-    item.link = inputCardLinkImage.value;
+  (item) => {
     const newCard = createCard(item);
     cardsSection.addItem(newCard);
-    formAddCard.reset();
     popupAddForm.close();
   }
 );
@@ -95,8 +87,8 @@ openButtonAddCard.addEventListener('click', () => {
   popupAddForm.open();
 });
 
-const popupEditForm = new PopupWithForm('.popup_type_editProfile', () => {
-  userInfo.setUserInfo(inputProfileName.value, inputProfileProfession.value);
+const popupEditForm = new PopupWithForm('.popup_type_editProfile', (item) => {
+  userInfo.setUserInfo(item);
   popupEditForm.close();
 });
 popupEditForm.setEventListeners();
