@@ -43,7 +43,7 @@ const validationObject = {
   errorClass: 'popup__input-error'
 };
 
-const userInfo = new UserInfo('.profile__name', '.profile__profession')
+const userInfo = new UserInfo('.profile__name', '.profile__profession');
 const body = document.querySelector('.body');
 const popupEditProfile = body.querySelector('.popup_type_editProfile');
 const popupAddCard = body.querySelector('.popup_type_addPlace');
@@ -76,7 +76,7 @@ cardsSection.renderItems();
 const popupAddForm = new PopupWithForm(
   '.popup_type_addPlace',
   (item) => {
-    const newCard = createCard(item);
+    const newCard = createCard({name: item.placeName, link: item.link});
     cardsSection.addItem(newCard);
     popupAddForm.close();
   }
@@ -87,8 +87,8 @@ openButtonAddCard.addEventListener('click', () => {
   popupAddForm.open();
 });
 
-const popupEditForm = new PopupWithForm('.popup_type_editProfile', (item) => {
-  userInfo.setUserInfo(item);
+const popupEditForm = new PopupWithForm('.popup_type_editProfile', ({name, profession}) => {
+  userInfo.setUserInfo({name, profession});
   popupEditForm.close();
 });
 popupEditForm.setEventListeners();
@@ -96,6 +96,6 @@ popupEditForm.setEventListeners();
 openButtonEditProfile.addEventListener('click', () => {
   const inputValues = userInfo.getUserInfo();
   inputProfileName.value = inputValues.name;
-  inputProfileProfession.value = inputValues.info;
+  inputProfileProfession.value = inputValues.profession;
   popupEditForm.open();
 });
